@@ -37,6 +37,12 @@ public class OOPsDemo {
 		 * lunchTime()
 		 * markAttendance()
 		 * 
+		 * Single Inheritance - 1 parent - 1 child
+		 * Hierarchial Inheritance - 2 or more children - 1 parent
+		 * Multiple - Not Supported - 2 diff parent - 1 child
+		 * Multilevel - grandparent-parent-child
+		 * 
+		 * 
 		 * Polymorphism
 		 * Abstraction
 		 * Encaptulation
