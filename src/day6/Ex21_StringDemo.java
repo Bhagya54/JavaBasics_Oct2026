@@ -38,7 +38,7 @@ public class Ex21_StringDemo {
 		
 		
 		//new keyword
-		String sn1=new String("Tea");
+		String sn1=new String("tea");
 		String sn2=new String("Coffee");
 		String sn3=new String("Tea");
 		
@@ -50,6 +50,50 @@ public class Ex21_StringDemo {
 		System.out.println(str1);
 		str1=str1.concat(" Planet");
 		System.out.println(str1);
+		
+		System.out.println(sn1.equals(sn3));//false
+		System.out.println(sn1.equalsIgnoreCase(sn3));//true
+		
+		String st="selenium";
+		
+		System.out.println("Length of string st: "+st.length());//8
+		System.out.println("Value at index 2: " + st.charAt(2));//l
+		
+		System.out.println(st.concat(" with java"));
+		System.out.println(st.contains("ium"));
+		
+		/*char[] ch= {'s','e','l','e'};
+		System.out.println(ch[0]);*/
+		
+		System.out.println(st.endsWith("ium"));
+		System.out.println(st.startsWith("s"));
+		
+		System.out.println(st.indexOf("e"));//1
+		System.out.println(st.lastIndexOf("e"));//3
+		
+		//System.out.println(st.replace("e", "n"));
+		System.out.println(st.substring(2,5));
+	
+		char[] values=st.toCharArray();
+		for(int index=0;index<values.length;index++) {
+			System.out.println(values[index]);
+		}
+		
+		System.out.println(st.toUpperCase());//SELENIUM
+		st="     java    ";
+		System.out.println(st.trim());
+	
+		
+		/*
+		 * isEmpty()
+		 * isBlank()
+		 */
+		String st1="";
+		System.out.println("Is empty:"+st1.isEmpty());
+		System.out.println("Is Blank:" + st1.isBlank());
+		
+		
+		
 	}
 
 }
