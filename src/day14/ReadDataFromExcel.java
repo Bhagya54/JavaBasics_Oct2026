@@ -6,16 +6,13 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadDataFromExcel {
-
-	public static void main(String[] args) throws IOException {
-		// Apache POI
-		/*XSSFWorkbook - path workbook
-		 * XSSFSheet
-		 * XSSFRow
-		 * XSSFCell
-		 */
-		XSSFWorkbook wb=new XSSFWorkbook("./src/day14/testData.xlsx");
-		XSSFSheet sheet=wb.getSheet("data");
+	
+	public void readExcel(String path,String sheetName) throws IOException {
+//		XSSFWorkbook wb=new XSSFWorkbook("./src/day14/testData.xlsx");
+//		XSSFSheet sheet=wb.getSheet("data");
+//		
+		XSSFWorkbook wb=new XSSFWorkbook(path);
+		XSSFSheet sheet=wb.getSheet(sheetName);
 		
 		int noOfRows=sheet.getPhysicalNumberOfRows();//4
 		int noOfCols=sheet.getRow(0).getPhysicalNumberOfCells();//2
@@ -28,6 +25,19 @@ public class ReadDataFromExcel {
 				System.out.println(sheet.getRow(r).getCell(c).getStringCellValue());
 			}
 		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		
+		
+		
+		// Apache POI
+		/*XSSFWorkbook - path workbook
+		 * XSSFSheet
+		 * XSSFRow
+		 * XSSFCell
+		 */
+		
 		
 //		System.out.println(sheet.getRow(0).getCell(0).getStringCellValue());
 //		System.out.println(sheet.getRow(0).getCell(1).getStringCellValue());
